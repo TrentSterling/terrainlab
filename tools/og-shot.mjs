@@ -39,7 +39,7 @@ await P.shot(path.join(out, 'og-0-digsite.png'));
 await P.eval('__earthworks.wakeVolcano()');
 for (let i = 1; i <= 8; i++) { await sleep(1500); await P.eval(hideChrome); await P.shot(path.join(out, `og-${i}-erupt.png`)); }
 // Second angle: lower and closer, fossil pit in front, volcano behind.
-const look = (pos, tgt) => `(()=>{const s=__surfaceWorld.snapshot();const d=[${tgt[0]}-${pos[0]},${tgt[1]}-${pos[1]},${tgt[2]}-${pos[2]}];const h=Math.hypot(d[0],d[2]);s.camera.position=[${pos.join(',')}];s.camera.rotation=[Math.atan2(-d[0],-d[2]),Math.atan2(d[1],h)];s.camera.nav='fly';__surfaceWorld.loadSnapshot(s);return 1})()`;
+const look = (pos, tgt) => `(()=>{const s=__surfaceWorld.snapshot();const d=[(${tgt[0]})-(${pos[0]}),(${tgt[1]})-(${pos[1]}),(${tgt[2]})-(${pos[2]})];const h=Math.hypot(d[0],d[2]);s.camera.position=[${pos.join(',')}];s.camera.rotation=[Math.atan2(-d[0],-d[2]),Math.atan2(d[1],h)];s.camera.nav='fly';__surfaceWorld.loadSnapshot(s);return 1})()`;
 await P.eval(look([64, 27, 66], [10, 24, 30]));
 await P.eval('__surfaceWorld.whenIdle(90000)');
 await P.eval('__earthworks.wakeVolcano()');
