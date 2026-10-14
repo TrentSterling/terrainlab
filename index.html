@@ -246,7 +246,7 @@ aside{max-width:100vw!important;width:min(380px,100vw)!important;min-width:0}.dr
 <div class="titleline"><div><a class="brand-link" href="https://tront.xyz/" rel="noopener" target="_blank"><span class="hud-logo">Tront terrain lab</span><span class="byline">Trent Sterling · tront.xyz</span></a></div><button aria-controls="controls-drawer" aria-expanded="false" class="menu-button" id="menu" type="button">Controls <kbd>Tab</kbd></button><button class="play-open" id="play-open" type="button">Play</button></div>
 <nav aria-label="Movement" class="nav-switch"><button class="active" data-nav="fly" type="button">Fly</button><button data-nav="walk" type="button">Walk</button><span class="switch-hint"><kbd>Space ×2</kbd></span></nav>
 <div class="top-actions"><button id="save-world" type="button">Save</button><button id="load-world" type="button">Load</button><button id="photo-world" title="Save a clean scene PNG" type="button">Photo</button><button class="about-trigger" title="About this demo and keyboard controls" type="button">About</button></div></header>
-<div class="viewport" id="viewport"><canvas aria-label="First-person terrain sandbox. WASD moves. Double-tap Space toggles flight. Hold mouse to use the selected tool; Tab opens controls." id="scene" tabindex="0"></canvas>
+<div class="viewport" id="viewport"><canvas aria-label="First-person terrain sandbox. WASD moves. Double-tap Space toggles flight. Hold mouse to use the selected tool; Tab opens controls." id="scene" data-tront-discovery-game-surface tabindex="0"></canvas>
 <div class="queue-line" id="queue-line"><div id="queue-progress"></div></div>
 <section class="inspect-panel" hidden="" id="inspect-panel"><div class="inspect-heading"><h3>Inside this chunk</h3><button aria-label="Close inspector" id="close-inspect" type="button">Close</button></div><div id="chunk-inspect"></div><div class="inspector-section"><p id="cell-address">Click a terrain surface.</p><canvas height="290" id="cell-canvas" width="438"></canvas><div class="legend"><span><i></i>Solid</span><span><i class="outside"></i>Air</span><span><i class="cross"></i>Crossing</span><span><i class="vertex"></i>Vertex</span></div><div class="cell-values" id="cell-values"></div><p class="result" id="cell-result">Eight samples → crossings → one vertex.</p></div></section>
 <canvas aria-hidden="true" class="axes" height="144" id="axes" width="144"></canvas>
@@ -3441,7 +3441,6 @@ stream(true);requestAnimationFrame(animate);
         </div>
         <h3 class="tront-discovery__games-title">Games</h3>
         <div class="tront-discovery__grid" data-tront-discovery-cards></div>
-        <p class="tront-discovery__status" data-tront-discovery-status role="status" aria-live="polite"></p>
         <noscript><p class="tront-discovery__hub"><a href="/craftmine/">CraftMine</a> &middot; <a href="/smear/">SMEAR</a> &middot; <a href="/games/">More games and tools</a></p></noscript>
     </section>
 </details>
